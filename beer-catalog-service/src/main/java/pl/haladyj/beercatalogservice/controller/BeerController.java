@@ -28,4 +28,9 @@ public class BeerController {
     public List<Beer> getAllBeer(){
         return service.findAllBeer();
     }
+
+    @GetMapping("/admin")
+    public String forAdminOnly(){
+        return "THIS IS FOR ADMIN'S EYES ONLY, ZUUL FILTERED";
+    }
 }
